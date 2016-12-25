@@ -1,6 +1,33 @@
 
 $(document).ready(function(){
 	
+	$("#ficheLink").click(function(){
+    $(this).hide();
+        $("#ficheOpt1").fadeIn(100);
+        $("#ficheOpt1").css("display","block");
+        $("#ficheOpt2").fadeIn(100);
+        $("#ficheOpt2").css("display","block");
+
+
+        $("#compteLink").fadeIn(500);
+        $("#compteOpt1").fadeOut(1);
+        $("#compteOpt2").fadeOut(1);
+        
+
+      });
+
+    $("#compteLink").click(function(){
+    $(this).hide();
+        $("#compteOpt1").fadeIn(100);
+        $("#compteOpt1").css("display","block");
+        $("#compteOpt2").fadeIn(100);
+        $("#compteOpt2").css("display","block");
+
+        $("#ficheLink").fadeIn(500);
+         $("#ficheOpt1").fadeOut(1);
+        $("#ficheOpt2").fadeOut(1);
+        
+
 	$('input[type=checkbox],input[type=radio],input[type=file]').uniform();
 	
 	$('select').select2();

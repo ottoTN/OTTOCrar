@@ -1,6 +1,5 @@
 
 $(document).ready(function(){
-	 alert("clickef");
 	
 	// === jQuery Peity === //
 	$.fn.peity.defaults.line = {

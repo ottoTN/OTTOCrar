@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 	
-	 alert("clickef");
+	
 	
 	// === Prepare peity charts === //
 	maruti.peity();
