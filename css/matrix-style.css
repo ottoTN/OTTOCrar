@@ -16,7 +16,7 @@ a:hover, a:focus {
 	text-decoration: none; color:#28b779;
 }
 .dropdown-menu .divider{ margin:4px 0px;}
-.dropdown-menu{ min-width:180px;}
+.dropdown-menu{ min-width:300px;}
 .dropdown-menu > li > a{ padding:3px 10px; color:#666; font-size:12px;}
 .dropdown-menu > li > a i{ padding-right:3px;}
 .userphoto img{ width:19px; height:19px;}
@@ -33,6 +33,102 @@ hr{ border-top-color:#dadada;}
 .label-important, .badge-important{ background:#f74d4d;}
 
 /*Metro Background color class*/
+.bg-success {
+  background-color: #5cb85c;
+  color: #fff;
+}
+.bg-info {
+  background-color: #5bc0de;
+  color: #fff;
+}
+.bg-warning {
+  background-color: #f0ad4e;
+  color: #fff;
+}
+.bg-danger {
+  background-color: #d9534f;
+  color: #fff;
+}
+.bg-red {
+  background-color: #bf4346;
+  color: #fff;
+}
+.bg-green {
+  background-color: #488c6c;
+  color: #fff;
+}
+.bg-blue {
+  background-color: #0a819c;
+  color: #fff;
+}
+.bg-yellow {
+  background-color: #f2994b;
+  color: #fff;
+}
+.bg-orange {
+  background-color: #e9662c;
+  color: #fff;
+}
+.bg-pink {
+  background-color: #bf3773;
+  color: #fff;
+}
+.bg-violet {
+  background-color: #9351ad;
+  color: #fff;
+}
+.bg-grey {
+  background-color: #4b5d67;
+  color: #fff;
+}
+.bg-dark {
+  background-color: #594857;
+  color: #fff;
+}
+
+
+.text-red {
+  color: #bf4346 !important;
+}
+.text-orange {
+  color: #e9662c !important;
+}
+.text-green {
+  color: #488c6c !important;
+}
+.text-yellow {
+  color: #f2994b !important;
+}
+.text-blue {
+  color: #0a819c !important;
+}
+.text-pink {
+  color: #bf3773 !important;
+}
+.text-violet {
+  color: #9351ad !important;
+}
+.text-grey {
+  color: #4b5d67 !important;
+}
+.text-dark {
+  color: #594857 !important;
+}
+.text-white {
+  color: #ffffff !important;
+}
+.text-facebook {
+  color: #418bca;
+}
+.text-twitter {
+  color: #5bc0de;
+}
+.text-google-plus {
+  color: #dd4c39;
+}
+.text-dribbble {
+  color: #ec5d92;
+}
 .bg_lb{ background:#27a9e3;}
 .bg_db{ background:#2295c9;}
 .bg_lg{ background:#28b779;}
@@ -59,7 +155,7 @@ hr{ border-top-color:#dadada;}
 	line-height: 600px;
 	overflow: hidden;
 	position: relative;
-	top: 26px;
+	top: 10px;
 	width: 191px;
 }
 #header h1 a {
@@ -195,7 +291,7 @@ hr{ border-top-color:#dadada;}
 /* Content */
 #content {
 	background: none repeat scroll 0 0 #eeeeee;
-	margin-left: 220px;
+	margin-left: 1px;
 	margin-right: 0;
 	padding-bottom: 25px;
 	position: relative;
@@ -299,6 +395,7 @@ hr{ border-top-color:#dadada;}
 	text-align:center; position:relative;
 	float:left;
 	margin-top:10px;
+	margin-left: 20%;
 }
 .stat-boxes, .quick-actions, .quick-actions-horizontal, .stats-plain {
 	display: block;
@@ -1039,6 +1136,11 @@ div.dataTables_wrapper .ui-widget-header {
 	text-align: center;
 	color: #666666;
 }
+
+.table td{
+	text-align: center;
+}
+
 .table.with-check tr th:first-child, .table.with-check tr td:first-child {
 	width: 10px;
 }
@@ -1587,3 +1689,71 @@ div.dataTables_wrapper .ui-widget-header {
 }
 #sidebar .content{ display:none;}
 }
+
+.receptionItems.span3{
+	width:30%;
+	height: 150px;
+	padding-top: 3%;
+	color: white;
+	font-size: 30px;
+}
+
+.receptionItems.span3 a{
+	color: white;
+	font-size: 30px;
+}
+
+.receptionItems.span2{
+		width:15%;
+	height: 150px;
+	padding-top: 3%;
+	display:none;
+}
+
+.modal {
+position: fixed;
+top: 50%;
+left: : 50%;
+width: 800px;
+margin: -30% 0 0 -30%;
+overflow: auto;
+background-color: #ffffff;
+border: 1px solid #999;
+border: 1px solid rgba(0, 0, 0, 0.3);
+*border: 1px solid #999;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+-webkit-background-clip: padding-box;
+-moz-background-clip: padding-box;
+background-clip: padding-box;
+}
+
+.modal.fade {
+z-index: -1200;
+top: -65%;
+-webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
+-moz-transition: opacity 0.3s linear, top 0.3s ease-out;
+-ms-transition: opacity 0.3s linear, top 0.3s ease-out;
+-o-transition: opacity 0.3s linear, top 0.3s ease-out;
+transition: opacity 0.3s linear, top 0.3s ease-out;
+}
+
+.modal.fade.in {
+z-index: 1200;
+top: 65%;
+}
+
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:70px;   /* Height of the footer */
+   background:#393939;
+   margin-left: -1.5%;
+   color: white;
+}
+
