@@ -16,9 +16,77 @@
 <link rel="stylesheet" href="css/jquery.gritter.css" />
 <link rel="stylesheet" href="css/widgets.min.css"/>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/bootstrap-toggle.min.css"/>
+
 
 </head>
 <body>
+
+p
+
+<!-- Modal -->
+<div id="addFacture" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Bill</h4>
+      </div>
+      <div class="modal-body">
+      <div class="row-fluid">
+      
+          <div class="widget-box">
+       
+        <div class="widget-content nopadding">
+          <form action="#" method="get" class="form-horizontal">
+            <div class="control-group">
+              <label class="control-label">Bill ID :</label>
+              <div class="controls">
+                <input type="text" class="span11" placeholder="01" disabled/>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Date :</label>
+              <div class="controls">
+                <input type="text" class="span11" placeholder="01/01/2000" disabled/>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Initial Cost :</label>
+              <div class="controls">
+                <input type="password"  class="span11" placeholder="0.00" disabled />
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Parts Required :</label>
+              <div class="controls">
+                <input type="text" class="span11" placeholder="SOO MANY" disabled />
+              </div>
+            </div>
+             <div class="control-group">
+              <label class="control-label">Status :</label>
+              <div class="controls">
+                <input type="text" class="span11" placeholder="Unpaid" disabled />
+              </div>
+            </div>
+          </form>
+        </div>
+          </div>
+       
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
 
 <div class="container">
     <div class="span12">
@@ -51,10 +119,9 @@
                                             </thead>
                                             <tbody>
                                               <tr class="gradeX">
-                                                <td>Trident</td>
-                                                <td>Internet
-                                                  Explorer 4.0</td>
-                                                <td>Win 95+</td>
+                                                <td>01</td>
+                                                <td>01/01/2000</td>
+                                                <td>CAR ON FIRE</td>
                                                 <td class="center">
                                                 <a class="btn btn-primary" href="UsePartWorker.html" role="button"><i class="fa fa-pencil"></i></a></td>
                                               </tr>
@@ -83,6 +150,7 @@
                                         <th>Solution</th>
                                         <th>Repair Type</th>
                                         <th>Cost</th>
+                                        <th>Status</th>
                                       </tr>
                                     </thead>
                                     <tbody>
@@ -94,8 +162,10 @@
                                       <td>Engine Burnt</td>
                                       <td>Change entire engine</td>
                                       <td>Buy new engine</td>
-                                      <td><button type="button" class="btn btn-link">0,00 TND</button></td>
-                                      
+                                      <td><button type="button" class="btn btn-link" data-toggle="modal" data-target="#addFacture">0,00 TND</button></td>
+                                      <td>
+                                      <input type="checkbox" checked data-toggle="toggle" data-on="Available" data-off="Not Available" data-onstyle="success" data-offstyle="danger">
+                                      </td>
                                     </tr>
                                     </tbody>
                                   </table>
@@ -122,5 +192,6 @@
 <script src="js/jquery.dataTables.min.js"></script> 
 <script src="js/matrix.js"></script> 
 <script src="js/matrix.tables.js"></script>
+<script src="js/bootstrap-toggle.min.js"></script>
 </body>
 </html>
