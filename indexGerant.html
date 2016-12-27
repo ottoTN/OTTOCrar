@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>OTTOCar</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="css/uniform.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/matrix-style.css" />
+<link rel="stylesheet" href="css/matrix-media.css" />
+<link rel="stylesheet" href="css/datepicker.css" />
+<link rel="stylesheet" href="css/bootstrap-wysihtml5.css" />
+<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/jquery.gritter.css" />
+<link rel="stylesheet" href="css/widgets.min.css"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+<div class="quick-actions_homepage">
+     <ul id="ficheRegion" class="quick-actions">
+      <!-- Fiche -->
+        <li id="ficheLink" class="receptionItems span3 bg_lb"> <a href="showFichesGerant.html"> <i class="fa fa-file-text-o fa-2x"></i></br></br> Files </a></li>
+ 
+
+        <!-- Compte -->
+        <li id="compteLink" class="receptionItems bg_lg span3"> <a href="ShowReportsGerant.html"> <i class="fa fa-flag-o fa-2x"></i></i></br></br> Reports </a></li>
+       
+      </ul>
+    </div>
+
+    <hr/>
+   
+
+<!--end-Footer-part-->
+
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.uniform.js"></script> 
+<script src="js/select2.min.js"></script> 
+<script src="js/jquery.dataTables.min.js"></script> 
+<script src="js/matrix.js"></script> 
+<script src="js/matrix.tables.js"></script>
+<script type="text/javascript">
+  // This function is called from the pop-up menus to transfer to
+  // a different page. Ignore if the value returned is a null string:
+  $(function(){
+
+   // jQuery methods go here...
+   /*alert("The paragraph was clicked.");*/
+   $("#ficheLink").click(function(){
+    $(this).hide();
+        $("#ficheOpt1").fadeIn(100);
+        $("#ficheOpt1").css("display","block");
+        $("#ficheOpt2").fadeIn(100);
+        $("#ficheOpt2").css("display","block");
+
+
+        $("#compteLink").fadeIn(500);
+        $("#compteOpt1").fadeOut(1);
+        $("#compteOpt2").fadeOut(1);
+        
+
+      });
+
+    $("#compteLink").click(function(){
+    $(this).hide();
+        $("#compteOpt1").fadeIn(100);
+        $("#compteOpt1").css("display","block");
+        $("#compteOpt2").fadeIn(100);
+        $("#compteOpt2").css("display","block");
+
+        $("#ficheLink").fadeIn(500);
+         $("#ficheOpt1").fadeOut(1);
+        $("#ficheOpt2").fadeOut(1);
+        
+        
+      });
+
+
+  function goPage (newURL) {
+      // if url is empty, skip the menu dividers and reset the menu selection to default
+      if (newURL != "") {
+      
+          // if url is "-", it is this page -- reset the menu:
+          if (newURL == "-" ) {
+              resetMenu();            
+          } 
+          // else, send page to designated URL            
+          else {  
+            document.location.href = newURL;
+          }
+      }
+  }
+
+// resets the menu selection upon entry to this page:
+function resetMenu() {
+   document.gomenu.selector.selectedIndex = 2;
+}
+
+});
+</script>
+</body>
+</html>
