@@ -158,7 +158,7 @@
                 <div class="pull-right">
                   <h4><span>Amount Due:</span> $7,650.00</h4>
                   <br>
-                  <a class="btn btn-primary btn-large pull-right" href="">Pay Invoice</a> </div>
+                  <button id="payInvoice" class="btn btn-primary btn-large pull-right">Pay Invoice</button> </div>
               </div>
             </div>
           </div>
@@ -204,10 +204,13 @@
                 <td>Engine Burnt</td>
                 <td>Change entire engine</td>
                 <td>Buy new engine</td>
-                <td><button type="button" class="btn btn-link" data-toggle="modal" data-target="#addFacture">0,00 TND</button></td>
+                <td><button type="button" id="cost" class="btn btn-link" data-toggle="modal" data-target="#addFacture">0,00 TND</button></td>
                 <td><!-- Rounded switch -->
-                  <input readonly type="checkbox" disabled data-toggle="toggle" data-on="Paid" data-off="Unpaid" data-onstyle="success" data-width="50" data-height="25" /> 
+                  <div id="invoiceStatus1" >
+                  <input type="checkbox" disabled data-toggle="toggle" data-on="Paid" data-off="Unpaid" data-onstyle="success" data-width="50" data-height="25" /> 
+                  </div>
                 </td>
+                
               </tr>
               </tbody>
             </table>
@@ -227,7 +230,18 @@
 <script src="js/matrix.js"></script> 
 <script src="js/matrix.tables.js"></script>
 <script src="js/bootstrap-toggle.min.js"></script>
+<script type="text/javascript">
+  $('#payInvoice').click(function (){
+    $('#invoiceStatus1').empty();
+    $( "#invoiceStatus1" ).append( '<div class="toggle btn btn-default on" data-toggle="toggle" disabled="disabled" style="width: 50px; height: 25px;"><input type="checkbox" checked disabled="" data-toggle="toggle" data-on="Paid" data-off="Unpaid" data-onstyle="success" data-width="50" data-height="25"><div class="toggle-group"><label class="btn btn-success toggle-on" style="line-height: 34px;">Paid</label><label class="btn btn-default active toggle-off" style="line-height: 34px;">Unpaid</label><span class="toggle-handle btn btn-default"></span></div></div>' );
+    
+    $('#payInvoice').attr("disabled","disabled");
+    $('#payInvoice').html("Payed");
+    $('#cost').html('70,00 TND');
+    $('#addFacture').modal('hide');
 
+  });
+</script>
 </body>
 </html>
   
