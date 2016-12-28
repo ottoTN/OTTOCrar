@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>OTTOCar</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="css/uniform.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/matrix-style.css" />
+<link rel="stylesheet" href="css/matrix-media.css" />
+<link rel="stylesheet" href="css/datepicker.css" />
+<link rel="stylesheet" href="css/bootstrap-wysihtml5.css" />
+<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/jquery.gritter.css" />
+<link rel="stylesheet" href="css/widgets.min.css"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+<script src="js/jquery.min.js"></script> 
+
+</head>
+<body>
+
+<div class="row-fluid centre">
+        <div class="span10">
+            <div class="widget-box">
+                <div class="widget-title"> <span class="icon"> <i class="fa fa-handshake-o"></i> </span>
+                    <h5>New Provider</h5>
+                </div>
+                <div class="widget-content nopadding">
+                    <form action="#" method="get" class="form-horizontal" name="basic_validate" id="basic_validate" novalidate="novalidate">  
+                        <div class="control-group">
+                            <label class="control-label">Name :</label>
+                            <div class="controls">
+                                <input type="text" class="span6" placeholder="First & Last name" required>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Address :</label>
+                            <div class="controls">
+                                <textarea class="span9" placeholder="0 Street New York City" required> </textarea>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Email :</label>
+                            <div class="controls">
+                              <input type="text" name="email" id="email" class="span8">
+                            </div>
+                          </div>
+			            <div class="control-group">
+                            <label class="control-label">Phone :</label>
+                            <div class="controls">
+                                <input type="text" id="mask-phone" class="span2 mask text" required>
+                            </div>
+                        </div>  
+			            <div class="control-group">
+                          <label class="control-label">Part (Type) :</label>
+                          <div class="controls">
+                            <select required class="span4">
+                              <option>Stuff</option>
+                              <option>More stuff</option>
+                              <option>Things</option>
+                            </select>
+                        </div><br> 
+                        <div class="form-actions">
+                            <center><button type="submit" class="btn btn-success">Save</button></center>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr/>
+   
+
+<!--end-Footer-part-->
+
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery.ui.custom.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/bootstrap-colorpicker.js"></script> 
+<script src="js/bootstrap-datepicker.js"></script> 
+<script src="js/jquery.toggle.buttons.js"></script> 
+<script src="js/masked.js"></script> 
+<script src="js/jquery.uniform.js"></script> 
+<script src="js/select2.min.js"></script> 
+<script src="js/matrix.js"></script> 
+<script src="js/jquery.validate.js"></script> 
+<script src="js/matrix.form_validation.js"></script>
+<script type="text/javascript">
+	$("#ficheLink").click(function(){
+    $(this).hide();
+        $("#ficheOpt1").fadeIn(100);
+        $("#ficheOpt1").css("display","block");
+        $("#ficheOpt2").fadeIn(100);
+        $("#ficheOpt2").css("display","block");
+
+
+        $("#compteLink").fadeIn(500);
+        $("#compteOpt1").fadeOut(1);
+        $("#compteOpt2").fadeOut(1);
+        
+
+      });
+
+    $("#compteLink").click(function(){
+    $(this).hide();
+        $("#compteOpt1").fadeIn(100);
+        $("#compteOpt1").css("display","block");
+        $("#compteOpt2").fadeIn(100);
+        $("#compteOpt2").css("display","block");
+
+        $("#ficheLink").fadeIn(500);
+         $("#ficheOpt1").fadeOut(1);
+        $("#ficheOpt2").fadeOut(1);
+    });
+</script>
+<script type="text/javascript">
+	Array.prototype.forEach.call(document.body.querySelectorAll("*[data-mask]"), applyDataMask);
+
+function applyDataMask(field) {
+    var mask = field.dataset.mask.split('');
+    
+    // For now, this just strips everything that's not a number
+    function stripMask(maskedData) {
+        function isDigit(char) {
+            return /\d/.test(char);
+        }
+        return maskedData.split('').filter(isDigit);
+    }
+    
+    // Replace `_` characters with characters from `data`
+    function applyMask(data) {
+        return mask.map(function(char) {
+            if (char != '_') return char;
+            if (data.length == 0) return char;
+            return data.shift();
+        }).join('')
+    }
+    
+    function reapplyMask(data) {
+        return applyMask(stripMask(data));
+    }
+    
+    function changed() {   
+        var oldStart = field.selectionStart;
+        var oldEnd = field.selectionEnd;
+        
+        field.value = reapplyMask(field.value);
+        
+        field.selectionStart = oldStart;
+        field.selectionEnd = oldEnd;
+    }
+    
+    field.addEventListener('click', changed)
+    field.addEventListener('keyup', changed)
+}
+</script>
+<script src="js/matrix.form_common.js"></script> 
+<script src="js/wysihtml5-0.3.0.js"></script> 
+<script src="js/jquery.peity.min.js"></script> 
+
+</body>
+</html>

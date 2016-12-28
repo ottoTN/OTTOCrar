@@ -22,6 +22,22 @@ $(document).ready(function(){
 			url:{
 				required:true,
 				url: true
+			},
+			number:{
+				required:true,
+				number:true
+			},
+			cin:{
+				required:true,
+				number:true,
+				minlength:8,
+				maxlength:8
+			},
+			cars:{
+				required:true
+			},
+			versions:{
+				required:true
 			}
 		},
 		errorClass: "help-inline",
