@@ -23,21 +23,32 @@
 <div class="quick-actions_homepage">
      <ul id="ficheRegion" class="quick-actions">
       <!-- Fiche -->
+      <div class="row">
         <li id="ficheLink" class="receptionItems span3 bg_lb"> <a href="showFichesGerant.html"> <i class="fa fa-file-text-o fa-2x"></i></br></br> Files </a></li>
         <!-- Rapport -->
-        <li id="compteLink" class="receptionItems bg_lg span3"> <a href="ShowReportsGerant.html"> <i class="fa fa-flag fa-2x"></i></i></br></br> Reports </a></li>
-      <!-- Employee -->
-        <li id="compteLink" class="receptionItems bg_lb span3"> <i class="fa fa-user fa-2x"></i></br></br> Employees </li>
-        <li id="compteOpt1" class="receptionItems span2 bg_lv"> <a href="createEmpGerant.html"> <i class="fa fa-user-plus fa-2x"></i> <span class="label label-success">Employee</span> <h3>Create</h3> </a> </li>
-        <li id="compteOpt2" class="receptionItems span2 bg_lo"> <a href="showEmpGerant.html"> <i class="fa fa-eye fa-2x"></i> <span class="label label-success">Employee</span><h3> Show</h3> </a> </li>
+        <li id="reportLink" class="receptionItems bg_lg span3"> <a href="ShowReportsGerant.html"> <i class="fa fa-flag fa-2x"></i></i></br></br> Reports </a></li>
+      </div>
+      <div class="row">
+      
+        
       <!-- Providers -->
-        <li id="compteLink" class="receptionItems bg_ly span3"> <i class="fa fa-handshake-o fa-2x"></i></br></br> Providers </li>
-        <li id="compteOpt1" class="receptionItems span2 bg_lv"> <a href="createProviderGerant.html"> <i class="fa fa-user-plus fa-2x"></i> <span class="label label-success">Provider</span> <h3>Create</h3> </a> </li>
-        <li id="compteOpt2" class="receptionItems span2 bg_lo"> <a href="showProviderGerant.html"> <i class="fa fa-eye fa-2x"></i> <span class="label label-success">Provider</span><h3> Show</h3> </a> </li>
+        <li id="providerLink" class="receptionItems bg_ly span3"> <i class="fa fa-handshake-o fa-2x"></i></br></br> Providers </li>
+        <li id="providerOpt1" class="receptionItems span2 bg_lv"> <a href="createProviderGerant.html"> <i class="fa fa-user-plus fa-2x"></i> <span class="label label-success">Provider</span> <h3>Create</h3> </a> </li>
+        <li id="providerOpt2" class="receptionItems span2 bg_lo"> <a href="showProviderGerant.html"> <i class="fa fa-eye fa-2x"></i> <span class="label label-success">Provider</span><h3> Show</h3> </a> </li>
+
       <!-- Parts -->
-        <li id="compteLink" class="receptionItems bg_lr span3"> <i class="fa fa-wrench fa-2x"></i></br></br> Parts </li>
-        <li id="compteOpt1" class="receptionItems span2 bg_lv"> <a href="createPartGerant.html"> <i class="fa fa-user-plus fa-2x"></i> <span class="label label-success">Part</span> <h3>Create</h3> </a> </li>
-        <li id="compteOpt2" class="receptionItems span2 bg_lo"> <a href="showPartsGerant.html"> <i class="fa fa-eye fa-2x"></i> <span class="label label-success">Part</span><h3> Show</h3> </a> </li>
+        <li id="partLink" class="receptionItems bg_lr span3"> <i class="fa fa-wrench fa-2x"></i></br></br> Parts </li>
+        <li id="partOpt1" class="receptionItems span2 bg_lv"> <a href="createPartGerant.html"> <i class="fa fa-user-plus fa-2x"></i> <span class="label label-success">Part</span> <h3>Create</h3> </a> </li>
+        <li id="partOpt2" class="receptionItems span2 bg_lo"> <a href="showPartsGerant.html"> <i class="fa fa-eye fa-2x"></i> <span class="label label-success">Part</span><h3> Show</h3> </a> </li>
+        </div>
+        <div class="row">
+        <li class="span2"></li>
+        <!-- Employee -->
+        <li id="employeeLink" class="receptionItems bg-grey span3"> <i class="fa fa-user fa-2x"></i></br></br> Employees </li>
+        <li id="employeeOpt1" class="receptionItems span2 bg_lv"> <a href="createEmpGerant.html"> <i class="fa fa-user-plus fa-2x"></i> <span class="label label-success">Employee</span> <h3>Create</h3> </a> </li>
+        <li id="employeeOpt2" class="receptionItems span2 bg_lo"> <a href="showEmpGerant.html"> <i class="fa fa-eye fa-2x"></i> <span class="label label-success">Employee</span><h3> Show</h3> </a> </li>
+        <li class="span2"></li>
+        </div>
       </ul>
     </div>
 
@@ -60,35 +71,58 @@
 
    // jQuery methods go here...
    /*alert("The paragraph was clicked.");*/
-   $("#ficheLink").click(function(){
+
+$("#employeeLink").click(function(){
     $(this).hide();
-        $("#ficheOpt1").fadeIn(100);
-        $("#ficheOpt1").css("display","block");
-        $("#ficheOpt2").fadeIn(100);
-        $("#ficheOpt2").css("display","block");
+        $("#employeeOpt1").fadeIn(100);
+        $("#employeeOpt1").css("display","block");
+        $("#employeeOpt2").fadeIn(100);
+        $("#employeeOpt2").css("display","block");
 
+        $("#providerLink").fadeIn(500);
+         $("#providerOpt1").fadeOut(1);
+        $("#providerOpt2").fadeOut(1);
 
-        $("#compteLink").fadeIn(500);
-        $("#compteOpt1").fadeOut(1);
-        $("#compteOpt2").fadeOut(1);
-        
-
-      });
-
-    $("#compteLink").click(function(){
-    $(this).hide();
-        $("#compteOpt1").fadeIn(100);
-        $("#compteOpt1").css("display","block");
-        $("#compteOpt2").fadeIn(100);
-        $("#compteOpt2").css("display","block");
-
-        $("#ficheLink").fadeIn(500);
-         $("#ficheOpt1").fadeOut(1);
-        $("#ficheOpt2").fadeOut(1);
+        $("#partLink").fadeIn(500);
+         $("#partOpt1").fadeOut(1);
+        $("#partOpt2").fadeOut(1);
         
         
       });
 
+$("#providerLink").click(function(){
+    $(this).hide();
+        $("#providerOpt1").fadeIn(100);
+        $("#providerOpt1").css("display","block");
+        $("#providerOpt2").fadeIn(100);
+        $("#providerOpt2").css("display","block");
+
+         $("#employeeLink").fadeIn(500);
+         $("#employeeOpt1").fadeOut(1);
+        $("#employeeOpt2").fadeOut(1);
+
+        $("#partLink").fadeIn(500);
+         $("#partOpt1").fadeOut(1);
+        $("#partOpt2").fadeOut(1);
+        
+        
+      });
+
+$("#partLink").click(function(){
+    $(this).hide();
+        $("#partOpt1").fadeIn(100);
+        $("#partOpt1").css("display","block");
+        $("#partOpt2").fadeIn(100);
+        $("#partOpt2").css("display","block");
+        
+        $("#providerLink").fadeIn(500);
+         $("#providerOpt1").fadeOut(1);
+        $("#providerOpt2").fadeOut(1);
+
+        $("#employeeLink").fadeIn(500);
+         $("#employeeOpt1").fadeOut(1);
+        $("#employeeOpt2").fadeOut(1);
+      });
 
   function goPage (newURL) {
       // if url is empty, skip the menu dividers and reset the menu selection to default
